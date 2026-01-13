@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ATV Executive Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">ATV Dashboard</div>
+  <nav class="menu">
+    <a href="#dashboard">Dashboard</a>
+    <a href="#atv">ATV</a>
+    <a href="#investment">Investment</a>
+    <button onclick="exportPDF()">Export PDF</button>
+  </nav>
+</header>
+
+<section id="dashboard">
+  <h2>Executive Dashboard</h2>
+  <div class="cards">
+    <div class="card">Net Profit<br><span id="netProfit">0</span></div>
+    <div class="card">Revenue<br><span id="totalRevenue">0</span></div>
+    <div class="card">Cost<br><span id="totalCost">0</span></div>
+  </div>
+  <canvas id="profitChart"></canvas>
+</section>
+
+<section id="atv">
+  <h2>ATV Per Vehicle</h2>
+  <input id="atvName" placeholder="ATV Name">
+  <input id="atvRevenue" type="number" placeholder="Revenue">
+  <input id="atvCost" type="number" placeholder="Cost">
+  <input id="atvHours" type="number" placeholder="Hours">
+  <input id="atvDep" type="number" placeholder="Depreciation">
+  <button onclick="addATV()">Add ATV</button>
+  <table>
+    <thead><tr><th>ATV</th><th>Profit</th></tr></thead>
+    <tbody id="atvTable"></tbody>
+  </table>
+</section>
+
+<section id="investment">
+  <h2>Investment</h2>
+  <input id="invInitial" type="number" placeholder="Initial Investment">
+  <input id="invMonthlyCost" type="number" placeholder="Monthly Cost">
+  <input id="invRevenue" type="number" placeholder="Monthly Revenue">
+  <button onclick="calcInvestment()">Calculate</button>
+  <p>Payback: <span id="payback">-</span> months</p>
+  <p>Year 1 Profit: <span id="yearProfit">-</span></p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

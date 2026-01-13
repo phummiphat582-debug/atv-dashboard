@@ -1,0 +1,8 @@
+body{font-family:Arial;margin:0;background:#f4f6f8}
+.topbar{display:flex;justify-content:space-between;align-items:center;background:#111827;color:#fff;padding:10px 20px}
+.menu a,.menu button{color:#fff;margin-left:10px;text-decoration:none;background:none;border:none;cursor:pointer}
+section{padding:20px}
+.cards{display:flex;gap:20px}
+.card{background:#fff;padding:20px;border-radius:8px;flex:1;font-size:18px}
+table{width:100%;margin-top:10px;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:8px;text-align:center}
